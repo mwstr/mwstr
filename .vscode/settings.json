@@ -17,6 +17,7 @@
     "*.tsx": "${capture}.ts",
     "biome.json": ".gitattributes, .editorconfig",
     "next.config.mjs": "next-env.d.ts",
-    "package.json": ".npmrc, bun.lock"
+    "package.json": ".npmrc, bun.lock",
+    "Dockerfile": ".dockerignore"
   }
 }
