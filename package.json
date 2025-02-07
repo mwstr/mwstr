@@ -12,7 +12,9 @@
     "check": "biome check --write",
     "types": "tsc --noEmit",
     "generate:types": "payload generate:types",
-    "generate:importmap": "payload generate:importmap"
+    "generate:importmap": "payload generate:importmap",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "latest",
@@ -28,10 +30,19 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-interactions": "^8.5.3",
+    "@storybook/addon-onboarding": "^8.5.3",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/nextjs": "^8.5.3",
+    "@storybook/react": "^8.5.3",
+    "@storybook/test": "^8.5.3",
     "@types/bun": "latest",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "lefthook": "^1.10.10",
+    "storybook": "^8.5.3",
     "typescript": "5.7.3"
   }
 }
