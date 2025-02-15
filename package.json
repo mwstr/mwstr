@@ -4,10 +4,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "clean": "rm -rf .next",
-    "build": "next build",
-    "start": "next start",
+    "dle": "next build",
+    "serve": "bun .next/standalone/server.js",
     "check": "biome check --write",
     "types": "tsc --noEmit",
     "generate:types": "payload generate:types",

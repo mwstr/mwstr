@@ -22,9 +22,9 @@ export default async function RootLayout(props: PropsWithChildren) {
 
   return (
     <html lang="en" className={clsx(merriweatherSans.variable)}>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <Header />
-        <main>{children}</main>
+        <main className="flex flex-col grow">{children}</main>
       </body>
     </html>
   )
