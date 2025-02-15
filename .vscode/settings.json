@@ -1,6 +1,8 @@
 {
   "npm.packageManager": "bun",
   "typescript.tsdk": "node_modules/typescript/lib",
+
+  // formatting
   "editor.formatOnSave": true,
   "[typescript][typescriptreact][javascript][javascriptreact][json][jsonc][css][tailwindcss][graphql]": {
     "editor.defaultFormatter": "biomejs.biome",
@@ -9,6 +11,21 @@
       "source.organizeImports.biome": "explicit"
     }
   },
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true,
+
+  // tailwind
+  "tailwindCSS.experimental.configFile": "src/app/(frontend)/global.css",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "[typescriptreact][javascriptreact]": {
+    "editor.quickSuggestions": {
+      "strings": "on"
+    }
+  },
+
+  // file nesting
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
@@ -16,7 +33,7 @@
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts",
     "biome.json": ".gitattributes, .editorconfig",
-    "next.config.mjs": "next-env.d.ts",
+    "next.config.mjs": "next-env.d.ts, postcss.config.mjs",
     "package.json": ".npmrc, bun.lock",
     "Dockerfile": ".dockerignore"
   }

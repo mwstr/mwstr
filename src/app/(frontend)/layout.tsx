@@ -1,17 +1,29 @@
-import type React from 'react'
-import './styles.css'
+import { clsx } from 'clsx'
+import './global.css'
+
+import type { Metadata } from 'next'
+import { Merriweather_Sans } from 'next/font/google'
+import type { PropsWithChildren } from 'react'
+import { Header } from './header'
+
+const merriweatherSans = Merriweather_Sans({
+  subsets: ['latin'],
+  variable: '--font-merriweather-sans',
+  display: 'swap',
+})
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
-}
+  description: 'Personal site',
+  title: 'Meowster',
+} satisfies Metadata
 
-export default async function RootLayout(props: { children: React.ReactNode }) {
+export default async function RootLayout(props: PropsWithChildren) {
   const { children } = props
 
   return (
-    <html lang="en">
+    <html lang="en" className={clsx(merriweatherSans.variable)}>
       <body>
+        <Header />
         <main>{children}</main>
       </body>
     </html>
